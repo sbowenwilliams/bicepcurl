@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bicep {</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+      .sidebar-nav {
+        padding: 9px 0;
+      }
+
+      @media (max-width: 980px) {
+        /* Enable use of floated navbar text */
+        .navbar-text.pull-right {
+          float: none;
+          padding-left: 5px;
+          padding-right: 5px;
+        }
+      }
+    </style>
+    <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/biceps.ico">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+<!--
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+-->
+          <a class="brand" href="#">Bicep {</a>
+<!--
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Logged in as <a href="#" class="navbar-link">Username</a>
+            </p>
+            <ul class="nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>/.nav-collapse
+-->
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              <li class="nav-header">Example Workouts</li>
+              <li class="active"><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Sidebar</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li class="nav-header">Sidebar</li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+              <li><a href="#">Link</a></li>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+
+        <div class="span9">
+
+            <div style = "position:relative; float:right;">
+                <img style="position: relative; float: right; top: 0; left: px;" id="skeleton_background" class="skeleton_b" src="muscular/background_color.png">
+                <img style="position: absolute; float: right; top: 0px; left: 0px;" id="text" class="skeleton_b" src="muscular/text.png">
+                <img style="position: absolute; top: 0px; left: 0px;" id="base" class="skeleton_b" src="muscular/base.png">
+                <img style="position: absolute; top: 0px; left: 0px;" id="abs" class="skeleton" src="muscular/abs.png">
+                <img style="position: absolute; top: 0px; left: 0px;" id="biceps" class="skeleton" src="muscular/biceps.png">
+                <img style="position: absolute; top: 0px; left: 0px;" id="calfs" class="skeleton" src="muscular/calfs.png">
+                <img style="position: absolute; top: 0px; left: 0px;" id="delts" class="skeleton" src="muscular/delts.png">
+                <img style="position: absolute; top: 0px; left: 0px;" id="glutes" class="skeleton" src="muscular/glutes.png">
+                <img style="position: absolute; top: 0px; left: 0px;" id="lats" class="skeleton" src="muscular/lats.png">
+                <img style="position: absolute; top: 0px; left: 0px;" id="obliques" class="skeleton" src="muscular/obliques.png">
+                <img style="position: absolute; top: 0px; left: 0px;" id="pecs" class="skeleton" src="muscular/pecs.png">
+                <img style="position: absolute; top: 0px; left: 0px;" id="quads" class="skeleton" src="muscular/quads.png">
+                <img style="position: absolute; top: 0px; left: 0px;" id="traps" class="skeleton" src="muscular/traps.png">
+                <img style="position: absolute; top: 0px; left: 0px;" id="tris" class="skeleton" src="muscular/tris.png">
+            </div>
+
+			<div id="drag-drop-container">
+				<div class="dropzone">
+				Your Selected Exercises:
+			</div>
+
+			<div id="yes-drop" class="draggable drag-drop quads glutes"> Squats </div>
+			<div id="yes-drop" class="draggable drag-drop pecs tris"> Bench Press </div>
+			<div id="yes-drop" class="draggable drag-drop delts tris abs"> Overhead Press </div>
+			<div id="yes-drop" class="draggable drag-drop quads glutes lats"> Power Cleans </div>
+			<div id="yes-drop" class="draggable drag-drop biceps lats"> Rows </div>
+			<div id="yes-drop" class="draggable drag-drop quads glutes"> Deadlifts </div>
+
+			</div>
+
+
+
+
+        </div><!--/span-->
+      </div><!--/row-->
+
+
+
+      <hr>
+
+      <footer>
+        <p> Bicep { 2015</p>
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+
+	<link rel="stylesheet" type="text/css" href="drag.css">
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+
+	<script src="interact.js"></script>
+	<script src="drag.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>

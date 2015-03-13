@@ -1,98 +1,99 @@
 .dropzone {
-  position: relative;
-  left: -300px;
-  height: 300px;
-  font-size: 24px;
-  background-color: #ccc;
-  border: dashed 4px transparent;
-  border-radius: 4px;
-  margin: 10px auto 30px;
-  padding: 10px;
-  width: 50%;
-  transition: background-color 0.3s;
-  z-index: -1;
+    position: relative;
+    left: -300px;
+    height: 300px;
+    font-size: 24px;
+    background-color: #ccc;
+    border: dashed 4px transparent;
+    border-radius: 4px;
+    margin: 10px auto 30px;
+    padding: 10px;
+    width: 50%;
+    transition: background-color 0.3s;
+    z-index: -1;
 }
 
 .drop-active {
-  border-color: #aaa;
+    border-color: #aaa;
 }
 
 .drop-target {
-  background-color: #29e;
-  border-color: #fff;
-  border-style: solid;
+    background-color: #29e;
+    border-color: #fff;
+    border-style: solid;
 }
 
 .drag-drop {
-  display: inline-block;
-  position: relative;
-  width: 150px;
-  height: 50px;
-  padding: 0.5em 0.5em;
-  color: #fff;
-  background-color: #29e;
-  border: solid 2px #fff;
-box-shadow: 5px 5px 5px #888888;
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 50px;
+    padding: 0.5em 0.5em;
+    color: #fff;
+    background-color: #29e;
+    border: solid 2px #fff;
+    box-shadow: 5px 5px 5px #888888;
     border-radius: 15px;
     text-align: center;
     padding-top: 25px;
     margin-bottom: 10px;
-
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
-
-  transition: background-color 0.3s;
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    transition: background-color 0.3s;
 }
 
 .drag-drop-sidebar {
-  display: inline-block;
-  position: relative;
-  width: 300px;
-  height: 50px;
-  padding: 0.5em 0.5em;
-  color: #fff;
-  background-color: #0037f0;
-  border: solid 2px #fff;
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    height: 50px;
+    padding: 0.5em 0.5em;
+    color: #fff;
+    background-color: #0037f0;
+    border: solid 2px #fff;
     box-shadow: 3px 3px 5px #888888;
     border-radius: 15px;
-
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
-
-  transition: background-color 0.3s;
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    transition: background-color 0.3s;
 }
 
 .drag-drop-invis {
-  display: inline-block;
-  position: relative;
-  width: 50px;
-  height: 50px;
-  padding: 0.5em 0.5em;
-  color: #fff;
-  background-color: #ffffff;
-  border: solid 2px #fff;
-
-
-  -webkit-transform: translate(0px, 0px);
-          transform: translate(0px, 0px);
-
-  transition: background-color 0.3s;
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    padding: 0.5em 0.5em;
+    color: #fff;
+    background-color: #ffffff;
+    border: solid 2px #fff;
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    transition: background-color 0.3s;
 }
 
-
 .drag-drop-container {
-  overflow: hidden;
-  height: 400px;
-  width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+    overflow: hidden;
+    height: 400px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .drag-drop.can-drop {
-  color: #000;
-  background-color: #4e4;
+    color: #000;
+    background-color: #4e4;
 }
 
-.skeleton{
-  visibility: hidden;
-} 
+.skeleton {
+    visibility: hidden;
+}
+
+#biggest {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}

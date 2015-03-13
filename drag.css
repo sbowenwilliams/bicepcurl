@@ -10,6 +10,7 @@
   padding: 10px;
   width: 50%;
   transition: background-color 0.3s;
+  z-index: -1;
 }
 
 .drop-active {
@@ -26,11 +27,16 @@
   display: inline-block;
   position: relative;
   width: 150px;
-  height: 75px;
+  height: 50px;
   padding: 0.5em 0.5em;
   color: #fff;
   background-color: #29e;
   border: solid 2px #fff;
+box-shadow: 5px 5px 5px #888888;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 25px;
+    margin-bottom: 10px;
 
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
@@ -47,6 +53,8 @@
   color: #fff;
   background-color: #0716cb;
   border: solid 2px #fff;
+    box-shadow: 3px 3px 5px #888888;
+    border-radius: 15px;
 
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);

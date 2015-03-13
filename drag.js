@@ -40,6 +40,10 @@ interact('.draggable')
   /* The dragging code for '.draggable' from the demo above
  * applies to this demo as well so it doesn't have to be repeated. */
 
+ var num_array = [0,0,0,0,0,0,0,0,0,0,0,0,0];
+ var muscle_array = ["abs","biceps","calfs","delts","glutes","lats","obliques","pecs","quads","traps","tris", "biggest", "dom"];
+ var success = false;
+ 
 // enable draggables to be dropped into this
 interact('.dropzone').dropzone({
   // only accept elements matching this CSS selector
@@ -60,24 +64,39 @@ interact('.dropzone').dropzone({
     // feedback the possibility of a drop
     dropzoneElement.classList.add('drop-target');
     draggableElement.classList.add('can-drop');
+	
 //    draggableElement.textContent = 'Dragged in';
   },
   ondragleave: function (event) {
     // remove the drop feedback style
     event.target.classList.remove('drop-target');
     event.relatedTarget.classList.remove('can-drop');
+	
+	var foo = event.relatedTarget.className;	//moved and modified from ondrop
+	var class_array = foo.split(" ");
+	for (i=0; i < class_array.length; i++) {
+		for (j=0; j < num_array.length; j++) {
+			if ((document.getElementById(class_array[i]) == document.getElementById(muscle_array[j])) && num_array[j] > 0) {
+				num_array[j] -= 1;
+				update_skeleton();
+			}
+		}
+	}
 //    event.relatedTarget.textContent = 'Dragged out';
   },
   ondrop: function (event) {
 //    event.relatedTarget.textContent = 'Dropped';
-	foo = event.relatedTarget.className;
-	bar = foo.split(" ");
-	for (i=0; i < bar.length; i++) {
-		if (document.getElementById(bar[i]) != null) {
-			document.getElementById(bar[i]).style.visibility="visible";
-			baz = 1;
+var foo = event.relatedTarget.className;	//moved from ondrop
+	var class_array = foo.split(" ");
+	for (i=0; i < class_array.length; i++) {
+		for (j=0; j < num_array.length; j++) {
+			if (document.getElementById(class_array[i]) == document.getElementById(muscle_array[j])) {
+				num_array[j] += 1;
+				update_skeleton();
+			}
 		}
 	}
+
   },
   ondropdeactivate: function (event) {
     // remove active dropzone feedback
@@ -85,3 +104,12 @@ interact('.dropzone').dropzone({
     event.target.classList.remove('drop-target');
   }
 });
+
+function update_skeleton() {
+	for (k=0; k < num_array.length; k++) {
+		if (num_array[k] >=1)
+			document.getElementById(muscle_array[k]).style.visibility="visible";
+		else 
+			document.getElementById(muscle_array[k]).style.visibility="hidden";
+	}
+}

@@ -56,6 +56,7 @@
     -webkit-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
     transition: background-color 0.3s;
+    padding-bottom: 15px;
 }
 
 .drag-drop-invis {
